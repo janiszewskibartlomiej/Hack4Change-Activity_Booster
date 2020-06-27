@@ -1,6 +1,6 @@
 # Hack4Change - Activity Booster
 
-![Logo]https://github.com/janiszewskibartlomiej/Hack4Change-Activity_Booster/blob/master/static/logo.png!
+![Logo](https://github.com/janiszewskibartlomiej/Hack4Change-Activity_Booster/blob/master/static/logo.png)!
 
 Cześć,
 
