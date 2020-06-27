@@ -6,7 +6,6 @@ from models import *
 
 app = Flask(__name__)
 app.secret_key = 'ZeroAbsolutneTylkoWOdwrotnaStrone'
-import routes
 
 
 def _fk_pragma_on_connect(dbapi_con, con_record):
@@ -24,5 +23,7 @@ def get_session(echo=False):
 session = get_session()
 
 
+import routes
+
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)

@@ -3,6 +3,11 @@ from models import Meetup, User, Town, Post
 from flask import render_template, redirect, url_for, request, session, flash
 
 
+@app.route('/')
+@app.route('/index/')
+def index():
+    return 'to jest index'
+
 @app.route('/meetup')
 @app.route('/meetup/')
 def meetup():
@@ -72,8 +77,8 @@ def add_meetup():
     return render_template('add_meetup.html')
 
 
-@app.route('/add_post', methods=['POST'])
-@app.route('/add_post/', methods=['POST'])
+@app.route('/add_post', methods=['GET', 'POST'])
+@app.route('/add_post/', methods=['GET', 'POST'])
 def add_comment():
     conn = get_session()
 
@@ -88,5 +93,10 @@ def add_comment():
         conn.add(new_comment)
         conn.commit()
         conn.close()
+
+        return redirect(url_for('event'))
+    elif request.method == 'GET':
+
+        return render_template('add_post.html')
 
     return redirect(url_for('event'))
