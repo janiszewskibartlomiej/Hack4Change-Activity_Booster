@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function wait(ms){
+       var start = new Date().getTime();
+       var end = start;
+       while(end < start + ms) {
+         end = new Date().getTime();
+      }
+        }
+
+
+      function navigate() {
+        window.location.href = '/';  // redirect when done!
+        wait(3000);
+      }
+      fetch('/').then(navigate); // load the slow url then navigate
+    </script>
+</head>
+<body>
+<center><img src="./static/thank_you.jpg"></center>
+</body>
+</html>
