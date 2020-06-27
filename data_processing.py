@@ -27,7 +27,8 @@ class DataProcessing:
 
     def get_all_meetups(self):
         select = self.connection.select_all_records(
-            query=r"SELECT * from meetups",
+            query=r"select T.town_id, M.meetup_id, M.created_at, M.name from towns as T "
+                  r"JOIN meetups as M ON T.town_id = M.town_id ",
             parameter="",
         )
         return select
@@ -45,4 +46,3 @@ class DataProcessing:
         longitude = float(coordinates_split[1])
         coordinates = [latitude, longitude]
         return coordinates
-

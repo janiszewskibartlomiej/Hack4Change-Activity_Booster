@@ -11,9 +11,9 @@ def index():
     return render_template("index.html")
 
 
-@app.route("/mettup=<int:id>")
+@app.route("/meetup=<int:id>")
 def graph_diff(id):
-    return render_template("")
+    return render_template("chat.html")
 
 @app.route("/add-meetup")
 def add_meetup():
