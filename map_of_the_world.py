@@ -31,7 +31,7 @@ class CreatingMap:
                 html=f'<div style="background-color:rgba(255, 255, 255, 0.4);">'
                      f'<center><div style="color: black; padding-top:2px;"><h4>{title}</h4></div>'
                      '<br>'
-                     f'<b style="font-size:13px;"><img src="./templates/image4690-1.png" alt="Logo" width="100px"></b>'
+                     f'<b style="font-size:13px; width="100px";"><img src="https://github.com/janiszewskibartlomiej/Hack4Change-Activity_Booster/blob/master/templates/image4690-1.png" alt="Logo"></b>'
                      '<br>'
                      '<br>'
                      f'<h4 style="color: black;">Total meetups: <b> {10}</b></h4>'
@@ -81,6 +81,7 @@ class CreatingMap:
                 ).add_to(cases_map)
 
         cases_map.save("index.html")  # only for github
+        cases_map.save("templates/index.html")  # only for github
 
 
 if __name__ == '__main__':
