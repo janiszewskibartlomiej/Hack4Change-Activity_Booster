@@ -1,0 +1,40 @@
+PRAGMA foreign_keys = ON;
+
+
+DROP TABLE IF EXISTS towns;
+DROP TABLE IF EXISTS meetups;
+DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS posts;
+
+
+CREATE TABLE towns(
+  town_id INTEGER UNIQUE PRIMARY KEY AUTOINCREMENT,
+  name TEXT NOT NULL,
+  latlang TEXT UNIQUE NOT NULL
+);
+
+CREATE TABLE meetups(
+  meetup_id INTEGER UNIQUE PRIMARY KEY AUTOINCREMENT UNIQUE,
+  created_at INTEGER NOT NULL,
+  town_id INTEGER NOT NULL,
+  name TEXT NOT NULL,
+  FOREIGN KEY (town_id) REFERENCES towns (town_id)
+);
+
+CREATE TABLE users(
+  user_id INTEGER UNIQUE PRIMARY KEY AUTOINCREMENT UNIQUE,
+  created_at INTEGER NOT NULL,
+  town_id INTEGER NOT NULL,
+  name TEXT NOT NULL,
+  FOREIGN KEY (user_id) REFERENCES meetups (meetup_id)
+);
+
+CREATE TABLE posts(
+  post_id INTEGER UNIQUE PRIMARY KEY AUTOINCREMENT UNIQUE,
+  user_id INTEGER NOT NULL,
+  created_at INTEGER NOT NULL,
+  town_id INTEGER NOT NULL,
+  metup_id INTEGER NOT NULL,
+  message TEXT NOT NULL,
+  FOREIGN KEY (post_id) REFERENCES users (user_id)
+);

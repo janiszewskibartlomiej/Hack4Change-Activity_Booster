@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_e5f58798ecd64f728a6854d638e8a82c {
+                    position: relative;
+                    width: 99.0%;
+                    height: 99.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_e5f58798ecd64f728a6854d638e8a82c" ></div>
+        
+</body>
+<script>    
+    
+            var map_e5f58798ecd64f728a6854d638e8a82c = L.map(
+                "map_e5f58798ecd64f728a6854d638e8a82c",
+                {
+                    center: [52.0, 20.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6.5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                    titles: "Hack4Change: Join a meeting",
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_d7b77e1d10cf4962a3abbf05ec55bd43 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 9, "maxZoom": 9, "minZoom": 5, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_e5f58798ecd64f728a6854d638e8a82c);
+        
+    
+            var marker_7b2d1a8428204cac98cbe14c4c69c014 = L.marker(
+                [54.0, 26.0],
+                {}
+            ).addTo(map_e5f58798ecd64f728a6854d638e8a82c);
+        
+    
+            var div_icon_9e78d4072f5a4179bcc7197d6058f3cb = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background-color:rgba(255, 255, 255, 0.4);\"\u003e\u003ccenter\u003e\u003cdiv style=\"color: black; padding-top:2px;\"\u003e\u003ch4\u003eHack4Change: Join a meeting\u003c/h4\u003e\u003c/div\u003e\u003cbr\u003e\u003cb style=\"font-size:13px;\"\u003e\u003cimg src=\"./templates/image4690-1.png\" alt=\"Logo\" width=\"100px\"\u003e\u003c/b\u003e\u003cbr\u003e\u003cbr\u003e\u003ch4 style=\"color: black;\"\u003eTotal meetups: \u003cb\u003e 10\u003c/b\u003e\u003c/h4\u003e\u003cbr\u003e\u003cdiv style=\" display: flex; justify-content: space-around\"\u003e\u003cbutton class=\"btn btn-primary btn-sm\" type=\"button\" style=\" padding: 8px 8px; font-size:15px;\" onclick=window.open(\"/new-meetup\")\u003e\ud83d\udcc8 New mettup\u003c/button\u003e\u003c/center\u003e\u003cbr\u003e\u003c/div\u003e", "iconAnchor": [200, 40], "iconSize": [280, 600]});
+            marker_7b2d1a8428204cac98cbe14c4c69c014.setIcon(div_icon_9e78d4072f5a4179bcc7197d6058f3cb);
+        
+    
+            var marker_314cb80cf4dc4bfea121c6c4d16364eb = L.marker(
+                [52.12, 21.02],
+                {}
+            ).addTo(map_e5f58798ecd64f728a6854d638e8a82c);
+        
+    
+            var icon_6da9491c6de54120be05df51ef6c59d0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "html": "position: absolute; z-index: 1", "icon": "certificate", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_314cb80cf4dc4bfea121c6c4d16364eb.setIcon(icon_6da9491c6de54120be05df51ef6c59d0);
+        
+    
+        var popup_09f6d141daad47a199d6a5f6e08b42a5 = L.popup({"maxWidth": 150});
+
+        
+            var html_ad6a0fc05338452b915b1b72c7297af6 = $(`<div id="html_ad6a0fc05338452b915b1b72c7297af6" style="width: 100.0%; height: 100.0%;"><div style="opacity:1.3;">                 </br>                 Confirmed: <b><center><p style="color:red;  font-size:14px; margin-block-start: 0.6em;">🏥 0</p></center></b>                 Deaths: <b><center><p style="color:black; font-size:14px; margin-block-start: 0.6em;">✟ 0</p></center></b>                 Recovered: <b><center><p style="color:green; font-size:14px; margin-block-start: 0.6em;">💚 0</p></center></b>                 <center><button type="button" class="btn btn-primary btn-sm" style=" padding: 5px; line-height: 1;" onclick=window.open("/graph=0")>📈 total</button></center>                 <center><button type="button" class="btn btn-primary btn-sm" style=" padding: 5px; line-height: 1; border-color: red; margin-block-start: 0.9em;     border-width: 2px;" onclick=window.open("/graph-diff=0")>📈 per day</button></center>                          </div></div>`)[0];
+            popup_09f6d141daad47a199d6a5f6e08b42a5.setContent(html_ad6a0fc05338452b915b1b72c7297af6);
+        
+
+        marker_314cb80cf4dc4bfea121c6c4d16364eb.bindPopup(popup_09f6d141daad47a199d6a5f6e08b42a5)
+        ;
+
+        
+    
+    
+            marker_314cb80cf4dc4bfea121c6c4d16364eb.bindTooltip(
+                `<div>
+                     
+                <center>Click me</center>
+                         
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_1dcdd369f9d14ac0ac91f7c49b726dfc = L.circleMarker(
+                [52.12, 21.02],
+                {"bubblingMouseEvents": true, "color": "yelow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yelow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_e5f58798ecd64f728a6854d638e8a82c);
+        
+    
+            var marker_619471c5b018435897042a7172ccde94 = L.marker(
+                [51.14, 22.34],
+                {}
+            ).addTo(map_e5f58798ecd64f728a6854d638e8a82c);
+        
+    
+            var icon_8ba4f6c86791499bacab4bd6eb515555 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "html": "position: absolute; z-index: 1", "icon": "certificate", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_619471c5b018435897042a7172ccde94.setIcon(icon_8ba4f6c86791499bacab4bd6eb515555);
+        
+    
+        var popup_0b56b99f91c940d7b4558f08f29c4d46 = L.popup({"maxWidth": 150});
+
+        
+            var html_cd7142c9a75a4fd69703f0e3e4da289d = $(`<div id="html_cd7142c9a75a4fd69703f0e3e4da289d" style="width: 100.0%; height: 100.0%;"><div style="opacity:1.3;">                 </br>                 Confirmed: <b><center><p style="color:red;  font-size:14px; margin-block-start: 0.6em;">🏥 0</p></center></b>                 Deaths: <b><center><p style="color:black; font-size:14px; margin-block-start: 0.6em;">✟ 0</p></center></b>                 Recovered: <b><center><p style="color:green; font-size:14px; margin-block-start: 0.6em;">💚 0</p></center></b>                 <center><button type="button" class="btn btn-primary btn-sm" style=" padding: 5px; line-height: 1;" onclick=window.open("/graph=0")>📈 total</button></center>                 <center><button type="button" class="btn btn-primary btn-sm" style=" padding: 5px; line-height: 1; border-color: red; margin-block-start: 0.9em;     border-width: 2px;" onclick=window.open("/graph-diff=0")>📈 per day</button></center>                          </div></div>`)[0];
+            popup_0b56b99f91c940d7b4558f08f29c4d46.setContent(html_cd7142c9a75a4fd69703f0e3e4da289d);
+        
+
+        marker_619471c5b018435897042a7172ccde94.bindPopup(popup_0b56b99f91c940d7b4558f08f29c4d46)
+        ;
+
+        
+    
+    
+            marker_619471c5b018435897042a7172ccde94.bindTooltip(
+                `<div>
+                     
+                <center>Click me</center>
+                         
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e9087034aba34edf89483c7b559230df = L.circleMarker(
+                [51.14, 22.34],
+                {"bubblingMouseEvents": true, "color": "yelow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yelow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_e5f58798ecd64f728a6854d638e8a82c);
+        
+    
+            var marker_158567cec6214c399ef4340624b5ec2e = L.marker(
+                [49.53, 19.3],
+                {}
+            ).addTo(map_e5f58798ecd64f728a6854d638e8a82c);
+        
+    
+            var icon_8ecb5c2dd8b34715a233627dcc4329b1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "html": "position: absolute; z-index: 1", "icon": "certificate", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_158567cec6214c399ef4340624b5ec2e.setIcon(icon_8ecb5c2dd8b34715a233627dcc4329b1);
+        
+    
+        var popup_525fe65e488240569317039863faaed1 = L.popup({"maxWidth": 150});
+
+        
+            var html_61e259732f54453a963c4137692d21e3 = $(`<div id="html_61e259732f54453a963c4137692d21e3" style="width: 100.0%; height: 100.0%;"><div style="opacity:1.3;">                 </br>                 Confirmed: <b><center><p style="color:red;  font-size:14px; margin-block-start: 0.6em;">🏥 0</p></center></b>                 Deaths: <b><center><p style="color:black; font-size:14px; margin-block-start: 0.6em;">✟ 0</p></center></b>                 Recovered: <b><center><p style="color:green; font-size:14px; margin-block-start: 0.6em;">💚 0</p></center></b>                 <center><button type="button" class="btn btn-primary btn-sm" style=" padding: 5px; line-height: 1;" onclick=window.open("/graph=0")>📈 total</button></center>                 <center><button type="button" class="btn btn-primary btn-sm" style=" padding: 5px; line-height: 1; border-color: red; margin-block-start: 0.9em;     border-width: 2px;" onclick=window.open("/graph-diff=0")>📈 per day</button></center>                          </div></div>`)[0];
+            popup_525fe65e488240569317039863faaed1.setContent(html_61e259732f54453a963c4137692d21e3);
+        
+
+        marker_158567cec6214c399ef4340624b5ec2e.bindPopup(popup_525fe65e488240569317039863faaed1)
+        ;
+
+        
+    
+    
+            marker_158567cec6214c399ef4340624b5ec2e.bindTooltip(
+                `<div>
+                     
+                <center>Click me</center>
+                         
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f307579998e04e87880ebad6bfaee21f = L.circleMarker(
+                [49.53, 19.3],
+                {"bubblingMouseEvents": true, "color": "yelow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yelow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_e5f58798ecd64f728a6854d638e8a82c);
+        
+    
+            var marker_4d2cd53aff81494aa1fb57f5af70a78b = L.marker(
+                [51.07, 17.02],
+                {}
+            ).addTo(map_e5f58798ecd64f728a6854d638e8a82c);
+        
+    
+            var icon_2bc4f401b72f4f8588fd791b88f5da96 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "html": "position: absolute; z-index: 1", "icon": "certificate", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_4d2cd53aff81494aa1fb57f5af70a78b.setIcon(icon_2bc4f401b72f4f8588fd791b88f5da96);
+        
+    
+        var popup_3d1ea07ef37d4a3fbe3a462bf180dca5 = L.popup({"maxWidth": 150});
+
+        
+            var html_2e4fddcdb0854fbaac378f986d962646 = $(`<div id="html_2e4fddcdb0854fbaac378f986d962646" style="width: 100.0%; height: 100.0%;"><div style="opacity:1.3;">                 </br>                 Confirmed: <b><center><p style="color:red;  font-size:14px; margin-block-start: 0.6em;">🏥 0</p></center></b>                 Deaths: <b><center><p style="color:black; font-size:14px; margin-block-start: 0.6em;">✟ 0</p></center></b>                 Recovered: <b><center><p style="color:green; font-size:14px; margin-block-start: 0.6em;">💚 0</p></center></b>                 <center><button type="button" class="btn btn-primary btn-sm" style=" padding: 5px; line-height: 1;" onclick=window.open("/graph=0")>📈 total</button></center>                 <center><button type="button" class="btn btn-primary btn-sm" style=" padding: 5px; line-height: 1; border-color: red; margin-block-start: 0.9em;     border-width: 2px;" onclick=window.open("/graph-diff=0")>📈 per day</button></center>                          </div></div>`)[0];
+            popup_3d1ea07ef37d4a3fbe3a462bf180dca5.setContent(html_2e4fddcdb0854fbaac378f986d962646);
+        
+
+        marker_4d2cd53aff81494aa1fb57f5af70a78b.bindPopup(popup_3d1ea07ef37d4a3fbe3a462bf180dca5)
+        ;
+
+        
+    
+    
+            marker_4d2cd53aff81494aa1fb57f5af70a78b.bindTooltip(
+                `<div>
+                     
+                <center>Click me</center>
+                         
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_3838e95f574d42c5ade63244af4bfeaa = L.circleMarker(
+                [51.07, 17.02],
+                {"bubblingMouseEvents": true, "color": "yelow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yelow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_e5f58798ecd64f728a6854d638e8a82c);
+        
+    
+            var marker_6fafb327c5b04bdf9c02f2b13730f3cc = L.marker(
+                [54.02, 19.02],
+                {}
+            ).addTo(map_e5f58798ecd64f728a6854d638e8a82c);
+        
+    
+            var icon_44c6d30f053d44e58c072d38b318759e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "html": "position: absolute; z-index: 1", "icon": "certificate", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_6fafb327c5b04bdf9c02f2b13730f3cc.setIcon(icon_44c6d30f053d44e58c072d38b318759e);
+        
+    
+        var popup_54af767bd5064c04ad8465628a7228ec = L.popup({"maxWidth": 150});
+
+        
+            var html_4ec4d4c1730648a88260a35c1e59252d = $(`<div id="html_4ec4d4c1730648a88260a35c1e59252d" style="width: 100.0%; height: 100.0%;"><div style="opacity:1.3;">                 </br>                 Confirmed: <b><center><p style="color:red;  font-size:14px; margin-block-start: 0.6em;">🏥 0</p></center></b>                 Deaths: <b><center><p style="color:black; font-size:14px; margin-block-start: 0.6em;">✟ 0</p></center></b>                 Recovered: <b><center><p style="color:green; font-size:14px; margin-block-start: 0.6em;">💚 0</p></center></b>                 <center><button type="button" class="btn btn-primary btn-sm" style=" padding: 5px; line-height: 1;" onclick=window.open("/graph=0")>📈 total</button></center>                 <center><button type="button" class="btn btn-primary btn-sm" style=" padding: 5px; line-height: 1; border-color: red; margin-block-start: 0.9em;     border-width: 2px;" onclick=window.open("/graph-diff=0")>📈 per day</button></center>                          </div></div>`)[0];
+            popup_54af767bd5064c04ad8465628a7228ec.setContent(html_4ec4d4c1730648a88260a35c1e59252d);
+        
+
+        marker_6fafb327c5b04bdf9c02f2b13730f3cc.bindPopup(popup_54af767bd5064c04ad8465628a7228ec)
+        ;
+
+        
+    
+    
+            marker_6fafb327c5b04bdf9c02f2b13730f3cc.bindTooltip(
+                `<div>
+                     
+                <center>Click me</center>
+                         
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_001c974489874e449bc53a82181df0c3 = L.circleMarker(
+                [54.02, 19.02],
+                {"bubblingMouseEvents": true, "color": "yelow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yelow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_e5f58798ecd64f728a6854d638e8a82c);
+        
+    
+            var marker_14e588ed3c534f4b809f197516f835f2 = L.marker(
+                [53.56, 14.26],
+                {}
+            ).addTo(map_e5f58798ecd64f728a6854d638e8a82c);
+        
+    
+            var icon_b807cb53dfcd4a30b2565f9e574cea33 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "html": "position: absolute; z-index: 1", "icon": "certificate", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_14e588ed3c534f4b809f197516f835f2.setIcon(icon_b807cb53dfcd4a30b2565f9e574cea33);
+        
+    
+        var popup_56d7b87d0d714a128ae846c2f802aee2 = L.popup({"maxWidth": 150});
+
+        
+            var html_bf4c661fe42849d5871ed125b11efbba = $(`<div id="html_bf4c661fe42849d5871ed125b11efbba" style="width: 100.0%; height: 100.0%;"><div style="opacity:1.3;">                 </br>                 Confirmed: <b><center><p style="color:red;  font-size:14px; margin-block-start: 0.6em;">🏥 0</p></center></b>                 Deaths: <b><center><p style="color:black; font-size:14px; margin-block-start: 0.6em;">✟ 0</p></center></b>                 Recovered: <b><center><p style="color:green; font-size:14px; margin-block-start: 0.6em;">💚 0</p></center></b>                 <center><button type="button" class="btn btn-primary btn-sm" style=" padding: 5px; line-height: 1;" onclick=window.open("/graph=0")>📈 total</button></center>                 <center><button type="button" class="btn btn-primary btn-sm" style=" padding: 5px; line-height: 1; border-color: red; margin-block-start: 0.9em;     border-width: 2px;" onclick=window.open("/graph-diff=0")>📈 per day</button></center>                          </div></div>`)[0];
+            popup_56d7b87d0d714a128ae846c2f802aee2.setContent(html_bf4c661fe42849d5871ed125b11efbba);
+        
+
+        marker_14e588ed3c534f4b809f197516f835f2.bindPopup(popup_56d7b87d0d714a128ae846c2f802aee2)
+        ;
+
+        
+    
+    
+            marker_14e588ed3c534f4b809f197516f835f2.bindTooltip(
+                `<div>
+                     
+                <center>Click me</center>
+                         
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_949643ef844e4eae82ef6a13c26e78e9 = L.circleMarker(
+                [53.56, 14.26],
+                {"bubblingMouseEvents": true, "color": "yelow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yelow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_e5f58798ecd64f728a6854d638e8a82c);
+        
+    
+            var marker_d89ead14f4f64f2db7743b6b94f65587 = L.marker(
+                [54.22, 18.38],
+                {}
+            ).addTo(map_e5f58798ecd64f728a6854d638e8a82c);
+        
+    
+            var icon_e4755eb0b2a64ac2a4af1c5cd73f8afe = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "html": "position: absolute; z-index: 1", "icon": "certificate", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_d89ead14f4f64f2db7743b6b94f65587.setIcon(icon_e4755eb0b2a64ac2a4af1c5cd73f8afe);
+        
+    
+        var popup_6fdeb4a258274ffc8eb790079adf0b34 = L.popup({"maxWidth": 150});
+
+        
+            var html_276818122ed14339b3ede33d84f308dc = $(`<div id="html_276818122ed14339b3ede33d84f308dc" style="width: 100.0%; height: 100.0%;"><div style="opacity:1.3;">                 </br>                 Confirmed: <b><center><p style="color:red;  font-size:14px; margin-block-start: 0.6em;">🏥 0</p></center></b>                 Deaths: <b><center><p style="color:black; font-size:14px; margin-block-start: 0.6em;">✟ 0</p></center></b>                 Recovered: <b><center><p style="color:green; font-size:14px; margin-block-start: 0.6em;">💚 0</p></center></b>                 <center><button type="button" class="btn btn-primary btn-sm" style=" padding: 5px; line-height: 1;" onclick=window.open("/graph=0")>📈 total</button></center>                 <center><button type="button" class="btn btn-primary btn-sm" style=" padding: 5px; line-height: 1; border-color: red; margin-block-start: 0.9em;     border-width: 2px;" onclick=window.open("/graph-diff=0")>📈 per day</button></center>                          </div></div>`)[0];
+            popup_6fdeb4a258274ffc8eb790079adf0b34.setContent(html_276818122ed14339b3ede33d84f308dc);
+        
+
+        marker_d89ead14f4f64f2db7743b6b94f65587.bindPopup(popup_6fdeb4a258274ffc8eb790079adf0b34)
+        ;
+
+        
+    
+    
+            marker_d89ead14f4f64f2db7743b6b94f65587.bindTooltip(
+                `<div>
+                     
+                <center>Click me</center>
+                         
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_9300040df2b4495d970f1e9e56973a77 = L.circleMarker(
+                [54.22, 18.38],
+                {"bubblingMouseEvents": true, "color": "yelow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yelow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_e5f58798ecd64f728a6854d638e8a82c);
+        
+    
+            var marker_316382dc2fdc4fcbbceb6282d3810918 = L.marker(
+                [54.32, 18.32],
+                {}
+            ).addTo(map_e5f58798ecd64f728a6854d638e8a82c);
+        
+    
+            var icon_292b55543a4544399212ff77c378c02a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "html": "position: absolute; z-index: 1", "icon": "certificate", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_316382dc2fdc4fcbbceb6282d3810918.setIcon(icon_292b55543a4544399212ff77c378c02a);
+        
+    
+        var popup_6a10da6cde19460d84220edfb8acd387 = L.popup({"maxWidth": 150});
+
+        
+            var html_587a67e5f1be48e9aab3c63311e9fd3a = $(`<div id="html_587a67e5f1be48e9aab3c63311e9fd3a" style="width: 100.0%; height: 100.0%;"><div style="opacity:1.3;">                 </br>                 Confirmed: <b><center><p style="color:red;  font-size:14px; margin-block-start: 0.6em;">🏥 0</p></center></b>                 Deaths: <b><center><p style="color:black; font-size:14px; margin-block-start: 0.6em;">✟ 0</p></center></b>                 Recovered: <b><center><p style="color:green; font-size:14px; margin-block-start: 0.6em;">💚 0</p></center></b>                 <center><button type="button" class="btn btn-primary btn-sm" style=" padding: 5px; line-height: 1;" onclick=window.open("/graph=0")>📈 total</button></center>                 <center><button type="button" class="btn btn-primary btn-sm" style=" padding: 5px; line-height: 1; border-color: red; margin-block-start: 0.9em;     border-width: 2px;" onclick=window.open("/graph-diff=0")>📈 per day</button></center>                          </div></div>`)[0];
+            popup_6a10da6cde19460d84220edfb8acd387.setContent(html_587a67e5f1be48e9aab3c63311e9fd3a);
+        
+
+        marker_316382dc2fdc4fcbbceb6282d3810918.bindPopup(popup_6a10da6cde19460d84220edfb8acd387)
+        ;
+
+        
+    
+    
+            marker_316382dc2fdc4fcbbceb6282d3810918.bindTooltip(
+                `<div>
+                     
+                <center>Click me</center>
+                         
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_6fbfd33911b3416086ce899a240c20bb = L.circleMarker(
+                [54.32, 18.32],
+                {"bubblingMouseEvents": true, "color": "yelow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yelow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_e5f58798ecd64f728a6854d638e8a82c);
+        
+    
+            var marker_877c9aec9c8d43d5818a33ae4a6ddbae = L.marker(
+                [50.03, 22.01],
+                {}
+            ).addTo(map_e5f58798ecd64f728a6854d638e8a82c);
+        
+    
+            var icon_77f3af3791a34f8f86aba1113cb6b52f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "html": "position: absolute; z-index: 1", "icon": "certificate", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_877c9aec9c8d43d5818a33ae4a6ddbae.setIcon(icon_77f3af3791a34f8f86aba1113cb6b52f);
+        
+    
+        var popup_05184da26a7e4fad8b0512c81ffba563 = L.popup({"maxWidth": 150});
+
+        
+            var html_27d4a3278dc34d17ba2c3bbacc049e69 = $(`<div id="html_27d4a3278dc34d17ba2c3bbacc049e69" style="width: 100.0%; height: 100.0%;"><div style="opacity:1.3;">                 </br>                 Confirmed: <b><center><p style="color:red;  font-size:14px; margin-block-start: 0.6em;">🏥 0</p></center></b>                 Deaths: <b><center><p style="color:black; font-size:14px; margin-block-start: 0.6em;">✟ 0</p></center></b>                 Recovered: <b><center><p style="color:green; font-size:14px; margin-block-start: 0.6em;">💚 0</p></center></b>                 <center><button type="button" class="btn btn-primary btn-sm" style=" padding: 5px; line-height: 1;" onclick=window.open("/graph=0")>📈 total</button></center>                 <center><button type="button" class="btn btn-primary btn-sm" style=" padding: 5px; line-height: 1; border-color: red; margin-block-start: 0.9em;     border-width: 2px;" onclick=window.open("/graph-diff=0")>📈 per day</button></center>                          </div></div>`)[0];
+            popup_05184da26a7e4fad8b0512c81ffba563.setContent(html_27d4a3278dc34d17ba2c3bbacc049e69);
+        
+
+        marker_877c9aec9c8d43d5818a33ae4a6ddbae.bindPopup(popup_05184da26a7e4fad8b0512c81ffba563)
+        ;
+
+        
+    
+    
+            marker_877c9aec9c8d43d5818a33ae4a6ddbae.bindTooltip(
+                `<div>
+                     
+                <center>Click me</center>
+                         
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ce588008d71041adb57856d9b436af83 = L.circleMarker(
+                [50.03, 22.01],
+                {"bubblingMouseEvents": true, "color": "yelow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yelow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_e5f58798ecd64f728a6854d638e8a82c);
+        
+    
+            var marker_9b861b6ac17e4e64963c25a7579bed68 = L.marker(
+                [52.25, 16.55],
+                {}
+            ).addTo(map_e5f58798ecd64f728a6854d638e8a82c);
+        
+    
+            var icon_2d99e85ddd174d22abf2d3993b42ded8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "html": "position: absolute; z-index: 1", "icon": "certificate", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_9b861b6ac17e4e64963c25a7579bed68.setIcon(icon_2d99e85ddd174d22abf2d3993b42ded8);
+        
+    
+        var popup_dd7f4170c9ec4b14942b38f0b175d469 = L.popup({"maxWidth": 150});
+
+        
+            var html_320b9979e0a24af2984d054aa55bad0c = $(`<div id="html_320b9979e0a24af2984d054aa55bad0c" style="width: 100.0%; height: 100.0%;"><div style="opacity:1.3;">                 </br>                 Confirmed: <b><center><p style="color:red;  font-size:14px; margin-block-start: 0.6em;">🏥 0</p></center></b>                 Deaths: <b><center><p style="color:black; font-size:14px; margin-block-start: 0.6em;">✟ 0</p></center></b>                 Recovered: <b><center><p style="color:green; font-size:14px; margin-block-start: 0.6em;">💚 0</p></center></b>                 <center><button type="button" class="btn btn-primary btn-sm" style=" padding: 5px; line-height: 1;" onclick=window.open("/graph=0")>📈 total</button></center>                 <center><button type="button" class="btn btn-primary btn-sm" style=" padding: 5px; line-height: 1; border-color: red; margin-block-start: 0.9em;     border-width: 2px;" onclick=window.open("/graph-diff=0")>📈 per day</button></center>                          </div></div>`)[0];
+            popup_dd7f4170c9ec4b14942b38f0b175d469.setContent(html_320b9979e0a24af2984d054aa55bad0c);
+        
+
+        marker_9b861b6ac17e4e64963c25a7579bed68.bindPopup(popup_dd7f4170c9ec4b14942b38f0b175d469)
+        ;
+
+        
+    
+    
+            marker_9b861b6ac17e4e64963c25a7579bed68.bindTooltip(
+                `<div>
+                     
+                <center>Click me</center>
+                         
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_bfc1060cdbc543ab8d6d3bb8b341fa93 = L.circleMarker(
+                [52.25, 16.55],
+                {"bubblingMouseEvents": true, "color": "yelow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yelow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_e5f58798ecd64f728a6854d638e8a82c);
+        
+    
+            var marker_4920f0df4e1d493985ac73365643ba7b = L.marker(
+                [50.15, 19.0],
+                {}
+            ).addTo(map_e5f58798ecd64f728a6854d638e8a82c);
+        
+    
+            var icon_c074f0bc5e0949709db6d1a96a750e59 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "html": "position: absolute; z-index: 1", "icon": "certificate", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_4920f0df4e1d493985ac73365643ba7b.setIcon(icon_c074f0bc5e0949709db6d1a96a750e59);
+        
+    
+        var popup_eaa00d15b23643d383101affc4caf134 = L.popup({"maxWidth": 150});
+
+        
+            var html_88d92751b3c04756b5f31da78fff842e = $(`<div id="html_88d92751b3c04756b5f31da78fff842e" style="width: 100.0%; height: 100.0%;"><div style="opacity:1.3;">                 </br>                 Confirmed: <b><center><p style="color:red;  font-size:14px; margin-block-start: 0.6em;">🏥 0</p></center></b>                 Deaths: <b><center><p style="color:black; font-size:14px; margin-block-start: 0.6em;">✟ 0</p></center></b>                 Recovered: <b><center><p style="color:green; font-size:14px; margin-block-start: 0.6em;">💚 0</p></center></b>                 <center><button type="button" class="btn btn-primary btn-sm" style=" padding: 5px; line-height: 1;" onclick=window.open("/graph=0")>📈 total</button></center>                 <center><button type="button" class="btn btn-primary btn-sm" style=" padding: 5px; line-height: 1; border-color: red; margin-block-start: 0.9em;     border-width: 2px;" onclick=window.open("/graph-diff=0")>📈 per day</button></center>                          </div></div>`)[0];
+            popup_eaa00d15b23643d383101affc4caf134.setContent(html_88d92751b3c04756b5f31da78fff842e);
+        
+
+        marker_4920f0df4e1d493985ac73365643ba7b.bindPopup(popup_eaa00d15b23643d383101affc4caf134)
+        ;
+
+        
+    
+    
+            marker_4920f0df4e1d493985ac73365643ba7b.bindTooltip(
+                `<div>
+                     
+                <center>Click me</center>
+                         
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_060b6d87e136492496abe5c28ef5d165 = L.circleMarker(
+                [50.15, 19.0],
+                {"bubblingMouseEvents": true, "color": "yelow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yelow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_e5f58798ecd64f728a6854d638e8a82c);
+        
+    
+            var marker_e102770c44c14717ad056e3e8f4957f6 = L.marker(
+                [50.53, 20.37],
+                {}
+            ).addTo(map_e5f58798ecd64f728a6854d638e8a82c);
+        
+    
+            var icon_b275654ae1e44601b13b213a46362338 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "html": "position: absolute; z-index: 1", "icon": "certificate", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_e102770c44c14717ad056e3e8f4957f6.setIcon(icon_b275654ae1e44601b13b213a46362338);
+        
+    
+        var popup_a0acceb6560d445b97c587fe5f333f3d = L.popup({"maxWidth": 150});
+
+        
+            var html_e01e6dcab2874207b8c4a69ef24cc277 = $(`<div id="html_e01e6dcab2874207b8c4a69ef24cc277" style="width: 100.0%; height: 100.0%;"><div style="opacity:1.3;">                 </br>                 Confirmed: <b><center><p style="color:red;  font-size:14px; margin-block-start: 0.6em;">🏥 0</p></center></b>                 Deaths: <b><center><p style="color:black; font-size:14px; margin-block-start: 0.6em;">✟ 0</p></center></b>                 Recovered: <b><center><p style="color:green; font-size:14px; margin-block-start: 0.6em;">💚 0</p></center></b>                 <center><button type="button" class="btn btn-primary btn-sm" style=" padding: 5px; line-height: 1;" onclick=window.open("/graph=0")>📈 total</button></center>                 <center><button type="button" class="btn btn-primary btn-sm" style=" padding: 5px; line-height: 1; border-color: red; margin-block-start: 0.9em;     border-width: 2px;" onclick=window.open("/graph-diff=0")>📈 per day</button></center>                          </div></div>`)[0];
+            popup_a0acceb6560d445b97c587fe5f333f3d.setContent(html_e01e6dcab2874207b8c4a69ef24cc277);
+        
+
+        marker_e102770c44c14717ad056e3e8f4957f6.bindPopup(popup_a0acceb6560d445b97c587fe5f333f3d)
+        ;
+
+        
+    
+    
+            marker_e102770c44c14717ad056e3e8f4957f6.bindTooltip(
+                `<div>
+                     
+                <center>Click me</center>
+                         
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_20cef8dd1ac849fc9676065c774eeea2 = L.circleMarker(
+                [50.53, 20.37],
+                {"bubblingMouseEvents": true, "color": "yelow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yelow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_e5f58798ecd64f728a6854d638e8a82c);
+        
+    
+            var marker_a9e009d368104e389806b176699fc911 = L.marker(
+                [50.03, 19.57],
+                {}
+            ).addTo(map_e5f58798ecd64f728a6854d638e8a82c);
+        
+    
+            var icon_feaa8499173a4a58b735a02fe376d3f6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "html": "position: absolute; z-index: 1", "icon": "certificate", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_a9e009d368104e389806b176699fc911.setIcon(icon_feaa8499173a4a58b735a02fe376d3f6);
+        
+    
+        var popup_ab6569f932884298a5789f186a644c04 = L.popup({"maxWidth": 150});
+
+        
+            var html_f66cd34bf03644b4aed440914626711c = $(`<div id="html_f66cd34bf03644b4aed440914626711c" style="width: 100.0%; height: 100.0%;"><div style="opacity:1.3;">                 </br>                 Confirmed: <b><center><p style="color:red;  font-size:14px; margin-block-start: 0.6em;">🏥 0</p></center></b>                 Deaths: <b><center><p style="color:black; font-size:14px; margin-block-start: 0.6em;">✟ 0</p></center></b>                 Recovered: <b><center><p style="color:green; font-size:14px; margin-block-start: 0.6em;">💚 0</p></center></b>                 <center><button type="button" class="btn btn-primary btn-sm" style=" padding: 5px; line-height: 1;" onclick=window.open("/graph=0")>📈 total</button></center>                 <center><button type="button" class="btn btn-primary btn-sm" style=" padding: 5px; line-height: 1; border-color: red; margin-block-start: 0.9em;     border-width: 2px;" onclick=window.open("/graph-diff=0")>📈 per day</button></center>                          </div></div>`)[0];
+            popup_ab6569f932884298a5789f186a644c04.setContent(html_f66cd34bf03644b4aed440914626711c);
+        
+
+        marker_a9e009d368104e389806b176699fc911.bindPopup(popup_ab6569f932884298a5789f186a644c04)
+        ;
+
+        
+    
+    
+            marker_a9e009d368104e389806b176699fc911.bindTooltip(
+                `<div>
+                     
+                <center>Click me</center>
+                         
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_9c3952738f86408ca77f7f5daa2eda19 = L.circleMarker(
+                [50.03, 19.57],
+                {"bubblingMouseEvents": true, "color": "yelow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yelow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_e5f58798ecd64f728a6854d638e8a82c);
+        
+    
+            var marker_6385d4db03b34fb3baef064fcfe1217b = L.marker(
+                [50.4, 17.56],
+                {}
+            ).addTo(map_e5f58798ecd64f728a6854d638e8a82c);
+        
+    
+            var icon_4d1a73e478fa4b17af6501d04020ce0f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "html": "position: absolute; z-index: 1", "icon": "certificate", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_6385d4db03b34fb3baef064fcfe1217b.setIcon(icon_4d1a73e478fa4b17af6501d04020ce0f);
+        
+    
+        var popup_29ec095a4daf4f63be832adccc3feb51 = L.popup({"maxWidth": 150});
+
+        
+            var html_2009bb11ef914719a305a6ef4610b43d = $(`<div id="html_2009bb11ef914719a305a6ef4610b43d" style="width: 100.0%; height: 100.0%;"><div style="opacity:1.3;">                 </br>                 Confirmed: <b><center><p style="color:red;  font-size:14px; margin-block-start: 0.6em;">🏥 0</p></center></b>                 Deaths: <b><center><p style="color:black; font-size:14px; margin-block-start: 0.6em;">✟ 0</p></center></b>                 Recovered: <b><center><p style="color:green; font-size:14px; margin-block-start: 0.6em;">💚 0</p></center></b>                 <center><button type="button" class="btn btn-primary btn-sm" style=" padding: 5px; line-height: 1;" onclick=window.open("/graph=0")>📈 total</button></center>                 <center><button type="button" class="btn btn-primary btn-sm" style=" padding: 5px; line-height: 1; border-color: red; margin-block-start: 0.9em;     border-width: 2px;" onclick=window.open("/graph-diff=0")>📈 per day</button></center>                          </div></div>`)[0];
+            popup_29ec095a4daf4f63be832adccc3feb51.setContent(html_2009bb11ef914719a305a6ef4610b43d);
+        
+
+        marker_6385d4db03b34fb3baef064fcfe1217b.bindPopup(popup_29ec095a4daf4f63be832adccc3feb51)
+        ;
+
+        
+    
+    
+            marker_6385d4db03b34fb3baef064fcfe1217b.bindTooltip(
+                `<div>
+                     
+                <center>Click me</center>
+                         
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_8bd20002d7b14e10858cf8c4c3ec467a = L.circleMarker(
+                [50.4, 17.56],
+                {"bubblingMouseEvents": true, "color": "yelow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yelow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_e5f58798ecd64f728a6854d638e8a82c);
+        
+    
+            var marker_ca33e5cd96044910b50e53139c12eab6 = L.marker(
+                [53.08, 23.1],
+                {}
+            ).addTo(map_e5f58798ecd64f728a6854d638e8a82c);
+        
+    
+            var icon_90c2cd92f1e144eeb233666e66a719c1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "html": "position: absolute; z-index: 1", "icon": "certificate", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_ca33e5cd96044910b50e53139c12eab6.setIcon(icon_90c2cd92f1e144eeb233666e66a719c1);
+        
+    
+        var popup_95c84ea7c73c4495aa1963bb65606381 = L.popup({"maxWidth": 150});
+
+        
+            var html_3047e3d99eaa46a3b7f55c424caf7770 = $(`<div id="html_3047e3d99eaa46a3b7f55c424caf7770" style="width: 100.0%; height: 100.0%;"><div style="opacity:1.3;">                 </br>                 Confirmed: <b><center><p style="color:red;  font-size:14px; margin-block-start: 0.6em;">🏥 0</p></center></b>                 Deaths: <b><center><p style="color:black; font-size:14px; margin-block-start: 0.6em;">✟ 0</p></center></b>                 Recovered: <b><center><p style="color:green; font-size:14px; margin-block-start: 0.6em;">💚 0</p></center></b>                 <center><button type="button" class="btn btn-primary btn-sm" style=" padding: 5px; line-height: 1;" onclick=window.open("/graph=0")>📈 total</button></center>                 <center><button type="button" class="btn btn-primary btn-sm" style=" padding: 5px; line-height: 1; border-color: red; margin-block-start: 0.9em;     border-width: 2px;" onclick=window.open("/graph-diff=0")>📈 per day</button></center>                          </div></div>`)[0];
+            popup_95c84ea7c73c4495aa1963bb65606381.setContent(html_3047e3d99eaa46a3b7f55c424caf7770);
+        
+
+        marker_ca33e5cd96044910b50e53139c12eab6.bindPopup(popup_95c84ea7c73c4495aa1963bb65606381)
+        ;
+
+        
+    
+    
+            marker_ca33e5cd96044910b50e53139c12eab6.bindTooltip(
+                `<div>
+                     
+                <center>Click me</center>
+                         
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_043370e62598453fb44f193946e8a058 = L.circleMarker(
+                [53.08, 23.1],
+                {"bubblingMouseEvents": true, "color": "yelow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yelow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_e5f58798ecd64f728a6854d638e8a82c);
+        
+    
+            var marker_d6b63e993dda4b35a4a8fd4089f8f841 = L.marker(
+                [49.5, 19.04],
+                {}
+            ).addTo(map_e5f58798ecd64f728a6854d638e8a82c);
+        
+    
+            var icon_3d9d0586d23d46a2b1cdf8c90ac2556d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "html": "position: absolute; z-index: 1", "icon": "certificate", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_d6b63e993dda4b35a4a8fd4089f8f841.setIcon(icon_3d9d0586d23d46a2b1cdf8c90ac2556d);
+        
+    
+        var popup_c9c74ee3fadb452d817f057f2b27aafe = L.popup({"maxWidth": 150});
+
+        
+            var html_2c7e22482a9645d5ac465e9599f323da = $(`<div id="html_2c7e22482a9645d5ac465e9599f323da" style="width: 100.0%; height: 100.0%;"><div style="opacity:1.3;">                 </br>                 Confirmed: <b><center><p style="color:red;  font-size:14px; margin-block-start: 0.6em;">🏥 0</p></center></b>                 Deaths: <b><center><p style="color:black; font-size:14px; margin-block-start: 0.6em;">✟ 0</p></center></b>                 Recovered: <b><center><p style="color:green; font-size:14px; margin-block-start: 0.6em;">💚 0</p></center></b>                 <center><button type="button" class="btn btn-primary btn-sm" style=" padding: 5px; line-height: 1;" onclick=window.open("/graph=0")>📈 total</button></center>                 <center><button type="button" class="btn btn-primary btn-sm" style=" padding: 5px; line-height: 1; border-color: red; margin-block-start: 0.9em;     border-width: 2px;" onclick=window.open("/graph-diff=0")>📈 per day</button></center>                          </div></div>`)[0];
+            popup_c9c74ee3fadb452d817f057f2b27aafe.setContent(html_2c7e22482a9645d5ac465e9599f323da);
+        
+
+        marker_d6b63e993dda4b35a4a8fd4089f8f841.bindPopup(popup_c9c74ee3fadb452d817f057f2b27aafe)
+        ;
+
+        
+    
+    
+            marker_d6b63e993dda4b35a4a8fd4089f8f841.bindTooltip(
+                `<div>
+                     
+                <center>Click me</center>
+                         
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_5fa60ade460643f4a4705820b0db3e65 = L.circleMarker(
+                [49.5, 19.04],
+                {"bubblingMouseEvents": true, "color": "yelow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yelow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_e5f58798ecd64f728a6854d638e8a82c);
+        
+    
+            var marker_94309071fb2d4781b2c0b362cd220176 = L.marker(
+                [52.14, 16.22],
+                {}
+            ).addTo(map_e5f58798ecd64f728a6854d638e8a82c);
+        
+    
+            var icon_c62e3da220f74534a6e39d1a2bfbd84a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "html": "position: absolute; z-index: 1", "icon": "certificate", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_94309071fb2d4781b2c0b362cd220176.setIcon(icon_c62e3da220f74534a6e39d1a2bfbd84a);
+        
+    
+        var popup_baaa4dfae6cd407e91514f8196adaeaa = L.popup({"maxWidth": 150});
+
+        
+            var html_6462ec2354bc46b185dba2b81c70ded4 = $(`<div id="html_6462ec2354bc46b185dba2b81c70ded4" style="width: 100.0%; height: 100.0%;"><div style="opacity:1.3;">                 </br>                 Confirmed: <b><center><p style="color:red;  font-size:14px; margin-block-start: 0.6em;">🏥 0</p></center></b>                 Deaths: <b><center><p style="color:black; font-size:14px; margin-block-start: 0.6em;">✟ 0</p></center></b>                 Recovered: <b><center><p style="color:green; font-size:14px; margin-block-start: 0.6em;">💚 0</p></center></b>                 <center><button type="button" class="btn btn-primary btn-sm" style=" padding: 5px; line-height: 1;" onclick=window.open("/graph=0")>📈 total</button></center>                 <center><button type="button" class="btn btn-primary btn-sm" style=" padding: 5px; line-height: 1; border-color: red; margin-block-start: 0.9em;     border-width: 2px;" onclick=window.open("/graph-diff=0")>📈 per day</button></center>                          </div></div>`)[0];
+            popup_baaa4dfae6cd407e91514f8196adaeaa.setContent(html_6462ec2354bc46b185dba2b81c70ded4);
+        
+
+        marker_94309071fb2d4781b2c0b362cd220176.bindPopup(popup_baaa4dfae6cd407e91514f8196adaeaa)
+        ;
+
+        
+    
+    
+            marker_94309071fb2d4781b2c0b362cd220176.bindTooltip(
+                `<div>
+                     
+                <center>Click me</center>
+                         
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_011e690872264520a45a92ee7972560f = L.circleMarker(
+                [52.14, 16.22],
+                {"bubblingMouseEvents": true, "color": "yelow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yelow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_e5f58798ecd64f728a6854d638e8a82c);
+        
+    
+            var marker_5de09dff486040ae843a33a5dcff0b64 = L.marker(
+                [53.26, 14.34],
+                {}
+            ).addTo(map_e5f58798ecd64f728a6854d638e8a82c);
+        
+    
+            var icon_256a4b8897e646ad9beb07e38127a521 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "html": "position: absolute; z-index: 1", "icon": "certificate", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_5de09dff486040ae843a33a5dcff0b64.setIcon(icon_256a4b8897e646ad9beb07e38127a521);
+        
+    
+        var popup_0861a8e6044a412187661efb877f42e5 = L.popup({"maxWidth": 150});
+
+        
+            var html_09fc5fa074ff473fa27d6279a36d0a23 = $(`<div id="html_09fc5fa074ff473fa27d6279a36d0a23" style="width: 100.0%; height: 100.0%;"><div style="opacity:1.3;">                 </br>                 Confirmed: <b><center><p style="color:red;  font-size:14px; margin-block-start: 0.6em;">🏥 0</p></center></b>                 Deaths: <b><center><p style="color:black; font-size:14px; margin-block-start: 0.6em;">✟ 0</p></center></b>                 Recovered: <b><center><p style="color:green; font-size:14px; margin-block-start: 0.6em;">💚 0</p></center></b>                 <center><button type="button" class="btn btn-primary btn-sm" style=" padding: 5px; line-height: 1;" onclick=window.open("/graph=0")>📈 total</button></center>                 <center><button type="button" class="btn btn-primary btn-sm" style=" padding: 5px; line-height: 1; border-color: red; margin-block-start: 0.9em;     border-width: 2px;" onclick=window.open("/graph-diff=0")>📈 per day</button></center>                          </div></div>`)[0];
+            popup_0861a8e6044a412187661efb877f42e5.setContent(html_09fc5fa074ff473fa27d6279a36d0a23);
+        
+
+        marker_5de09dff486040ae843a33a5dcff0b64.bindPopup(popup_0861a8e6044a412187661efb877f42e5)
+        ;
+
+        
+    
+    
+            marker_5de09dff486040ae843a33a5dcff0b64.bindTooltip(
+                `<div>
+                     
+                <center>Click me</center>
+                         
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_96efbdd3abdd44fbabf13547f0523aa4 = L.circleMarker(
+                [53.26, 14.34],
+                {"bubblingMouseEvents": true, "color": "yelow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yelow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_e5f58798ecd64f728a6854d638e8a82c);
+        
+    
+            var marker_59cb5c003cf7463eabe3617c4e49c41c = L.marker(
+                [51.56, 15.3],
+                {}
+            ).addTo(map_e5f58798ecd64f728a6854d638e8a82c);
+        
+    
+            var icon_207b6e33589f400ea2e472f0417ffc92 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "html": "position: absolute; z-index: 1", "icon": "certificate", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_59cb5c003cf7463eabe3617c4e49c41c.setIcon(icon_207b6e33589f400ea2e472f0417ffc92);
+        
+    
+        var popup_cb1e547ddd6b4734a64ee1275502f5fb = L.popup({"maxWidth": 150});
+
+        
+            var html_5decd655b5f74cc1a96a0cf1e736da32 = $(`<div id="html_5decd655b5f74cc1a96a0cf1e736da32" style="width: 100.0%; height: 100.0%;"><div style="opacity:1.3;">                 </br>                 Confirmed: <b><center><p style="color:red;  font-size:14px; margin-block-start: 0.6em;">🏥 0</p></center></b>                 Deaths: <b><center><p style="color:black; font-size:14px; margin-block-start: 0.6em;">✟ 0</p></center></b>                 Recovered: <b><center><p style="color:green; font-size:14px; margin-block-start: 0.6em;">💚 0</p></center></b>                 <center><button type="button" class="btn btn-primary btn-sm" style=" padding: 5px; line-height: 1;" onclick=window.open("/graph=0")>📈 total</button></center>                 <center><button type="button" class="btn btn-primary btn-sm" style=" padding: 5px; line-height: 1; border-color: red; margin-block-start: 0.9em;     border-width: 2px;" onclick=window.open("/graph-diff=0")>📈 per day</button></center>                          </div></div>`)[0];
+            popup_cb1e547ddd6b4734a64ee1275502f5fb.setContent(html_5decd655b5f74cc1a96a0cf1e736da32);
+        
+
+        marker_59cb5c003cf7463eabe3617c4e49c41c.bindPopup(popup_cb1e547ddd6b4734a64ee1275502f5fb)
+        ;
+
+        
+    
+    
+            marker_59cb5c003cf7463eabe3617c4e49c41c.bindTooltip(
+                `<div>
+                     
+                <center>Click me</center>
+                         
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_5a8b3effe1764e28b8043061df8d1082 = L.circleMarker(
+                [51.56, 15.3],
+                {"bubblingMouseEvents": true, "color": "yelow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yelow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_e5f58798ecd64f728a6854d638e8a82c);
+        
+    
+            var marker_f6c8939cd5c44d45b435a0246c94a954 = L.marker(
+                [53.07, 18.0],
+                {}
+            ).addTo(map_e5f58798ecd64f728a6854d638e8a82c);
+        
+    
+            var icon_f81965c0f6c647c6ab014ded519b251e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "html": "position: absolute; z-index: 1", "icon": "certificate", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_f6c8939cd5c44d45b435a0246c94a954.setIcon(icon_f81965c0f6c647c6ab014ded519b251e);
+        
+    
+        var popup_84b41980c3e941fb8bbc1956c62fdaef = L.popup({"maxWidth": 150});
+
+        
+            var html_9a262452b0c84274976a5b48f8e60140 = $(`<div id="html_9a262452b0c84274976a5b48f8e60140" style="width: 100.0%; height: 100.0%;"><div style="opacity:1.3;">                 </br>                 Confirmed: <b><center><p style="color:red;  font-size:14px; margin-block-start: 0.6em;">🏥 0</p></center></b>                 Deaths: <b><center><p style="color:black; font-size:14px; margin-block-start: 0.6em;">✟ 0</p></center></b>                 Recovered: <b><center><p style="color:green; font-size:14px; margin-block-start: 0.6em;">💚 0</p></center></b>                 <center><button type="button" class="btn btn-primary btn-sm" style=" padding: 5px; line-height: 1;" onclick=window.open("/graph=0")>📈 total</button></center>                 <center><button type="button" class="btn btn-primary btn-sm" style=" padding: 5px; line-height: 1; border-color: red; margin-block-start: 0.9em;     border-width: 2px;" onclick=window.open("/graph-diff=0")>📈 per day</button></center>                          </div></div>`)[0];
+            popup_84b41980c3e941fb8bbc1956c62fdaef.setContent(html_9a262452b0c84274976a5b48f8e60140);
+        
+
+        marker_f6c8939cd5c44d45b435a0246c94a954.bindPopup(popup_84b41980c3e941fb8bbc1956c62fdaef)
+        ;
+
+        
+    
+    
+            marker_f6c8939cd5c44d45b435a0246c94a954.bindTooltip(
+                `<div>
+                     
+                <center>Click me</center>
+                         
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_10cb22f1475e45d4b5c714be6b0fa7ef = L.circleMarker(
+                [53.07, 18.0],
+                {"bubblingMouseEvents": true, "color": "yelow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yelow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_e5f58798ecd64f728a6854d638e8a82c);
+        
+</script>
