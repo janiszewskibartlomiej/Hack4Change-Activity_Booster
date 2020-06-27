@@ -1,5 +1,7 @@
 # Hack4Change - Activity Booster
 
+!https://github.com/janiszewskibartlomiej/Hack4Change-Activity_Booster/blob/master/static/logo.png!
+
 Cześć,
 
 Lubisz działać / organizować akcje  prospołeczne/ proekologiczne? 
