@@ -13,8 +13,12 @@ def index():
 
 @app.route("/mettup=<int:id>")
 def graph_diff(id):
-    return render_template("./graphs/" + get_graph[1] + ".html")
+    return render_template("")
 
+@app.route("/add-meetup")
+def add_meetup():
+    towns = DataProcessing().get_all_towns()
+    return render_template("add-meetup.html", towns=towns)
 
 if __name__ == "__main__":
     app.run(debug=True)

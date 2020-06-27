@@ -25,6 +25,13 @@ class DataProcessing:
         )
         return select
 
+    def get_all_meetups(self):
+        select = self.connection.select_all_records(
+            query=r"SELECT * from meetups",
+            parameter="",
+        )
+        return select
+
     def get_icon_color(self, number_of_cases):
         for key, volume in self.interval.items():
             if volume[1] > number_of_cases >= volume[0]:

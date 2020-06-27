@@ -1,6 +1,7 @@
 import folium
 from folium import DivIcon
 from data_processing import DataProcessing
+from connect_to_db import ConnectToDb
 
 
 class CreatingMap:
@@ -8,8 +9,8 @@ class CreatingMap:
         pass
 
     def map_of_the_world(self):
-        title = "Hack4Change: Join a meeting"
-
+        title = "Hack4Change: <br> Activity Booster"
+        meetup_count = ConnectToDb().select_one_record(query="select count(*) from meetups;", parameter="")
         cases_map = folium.Map(
             location=[52.0, 20.0],
             width="99%",
@@ -26,39 +27,38 @@ class CreatingMap:
         folium.map.Marker(
             [54.0, 26.0],
             icon=DivIcon(
-                icon_size=(280, 600),
+                icon_size=(160, 200),
                 icon_anchor=(200, 40),
                 html=f'<div style="background-color:rgba(255, 255, 255, 0.4);">'
                      f'<center><div style="color: black; padding-top:2px;"><h4>{title}</h4></div>'
+                     f'<img src="static/logo.png" alt="Logo" style="width:80px;">'
                      '<br>'
-                     f'<b style="font-size:13px; width="100px";"><img src="https://github.com/janiszewskibartlomiej/Hack4Change-Activity_Booster/blob/master/templates/image4690-1.png" alt="Logo"></b>'
-                     '<br>'
-                     '<br>'
-                     f'<h4 style="color: black;">Total meetups: <b> {10}</b></h4>'
-                     '<br>'
-                     f'<div style=" display: flex; justify-content: space-around">'
-                     f'<button class="btn btn-primary btn-sm" type="button" style=" padding: 8px 8px; font-size:15px;" onclick=window.open("/new-meetup")>{chr(128200)} New mettup</button></center>'
-                     '<br>'
+                     f'<h4 style="color: black;">Total meetups: <b style="color: red; padding-bottom:2px;"> {meetup_count[0]}</b></h4>'
                      f"</div>",
             ),
         ).add_to(cases_map)
 
         data = DataProcessing().get_all_towns()
+        meetups = DataProcessing().get_all_meetups()
         # print(data)
         for row in data:
             coordinates = DataProcessing().slice_location(row[2])
+            # for item in meetups:
+            meetup_id = 1
+            # town_id = item[2]
+            name_meetup = "Python is everywhere"
             folium.Marker(
                 location=[coordinates[1], coordinates[0]],
                 popup=folium.Popup(
                     html=f"""<div style="opacity:1.3;">
-                </br>
-                Confirmed: <b><center><p style="color:red;  font-size:14px; margin-block-start: 0.6em;">{chr(127973)} {0}</p></center></b>
-                Deaths: <b><center><p style="color:black; font-size:14px; margin-block-start: 0.6em;">{chr(10015)} {0}</p></center></b>
-                Recovered: <b><center><p style="color:green; font-size:14px; margin-block-start: 0.6em;">{chr(128154)} {0}</p></center></b>
-                <center><button type="button" class="btn btn-primary btn-sm" style=" padding: 5px; line-height: 1;" onclick=window.open("/graph={0}")>{chr(128200)} total</button></center>
-                <center><button type="button" class="btn btn-primary btn-sm" style=" padding: 5px; line-height: 1; border-color: red; margin-block-start: 0.9em;     border-width: 2px;" onclick=window.open("/graph-diff={0}")>{chr(128200)} per day</button></center>
+                <b><center><p style="color:red; font-size:14px;">{row[1]}</p></center></b>
+                <center><p style="color:black; font-size:14px; margin-top:-.9em; margin-bottom:0.2em;">Meetups:</p></center>
+                <center><button type="button" class="btn btn-primary btn-sm" style="padding: 5px; margin-top:3px; margin-bottom: 3px;" onclick=window.open("/meetup={meetup_id}")>{name_meetup}</button></center>
+                <center><button type="button" class="btn btn-primary btn-sm" style="padding: 5px; margin-top:3px; margin-bottom: 3px;" onclick=window.open("/meetup={meetup_id}")>{name_meetup}</button></center>
+                <center><button type="button" class="btn btn-primary btn-sm" style="padding: 5px; margin-top:3px; margin-bottom: 3px;" onclick=window.open("/meetup={meetup_id}")>{name_meetup}</button></center>
+                <center><button type="button" class="btn btn-primary btn-sm" style=" padding: 5px; line-height: 1; border-color: red; margin-block-start: 0.9em;     border-width: 2px;" onclick=window.open("/add-meetup")>{chr(128200)} New meetup</button></center>
                          </div>""",
-                    max_width=150,
+                    max_width=140,
                 ),
                 icon=folium.Icon(
                     color="green",
@@ -68,7 +68,7 @@ class CreatingMap:
                 tooltip=f"""
                 <center>Click me</center>
                          """,
-                ).add_to(cases_map)
+            ).add_to(cases_map)
 
             color = "yelow"
 
@@ -78,7 +78,7 @@ class CreatingMap:
                 color=f"{color}",
                 fill=True,
                 fill_color=f"{color}",
-                ).add_to(cases_map)
+            ).add_to(cases_map)
 
         cases_map.save("index.html")  # only for github
         cases_map.save("templates/index.html")  # only for github
